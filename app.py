@@ -116,9 +116,17 @@ fig.add_vline(
     x=f"{planned_time}:00", 
     line_width=2, 
     line_dash="dash", 
-    line_color="#1f77b4",
-    annotation_text="Your Departure",
-    annotation_position="top left"
+    line_color="#1f77b4"
+)
+
+fig.add_annotation(
+    x=f"{planned_time}:00",
+    y=95,  # Places the text near the top of the chart
+    text="Your Departure",
+    showarrow=False,
+    xanchor="right",
+    xshift=-5,
+    font=dict(color="#1f77b4", size=12)
 )
 
 fig.update_layout(
